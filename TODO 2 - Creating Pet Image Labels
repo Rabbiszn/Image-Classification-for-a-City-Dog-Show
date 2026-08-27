@@ -1,0 +1,36 @@
+The get_pet_labels() function reads the image filenames from the pet_images/ folder and creates labels from those filenames.
+
+The filename is used as the dictionary key and the pet label is stored as a list.
+
+For example:
+
+Boston_terrier_02259.jpg
+
+becomes:
+
+boston terrier
+
+The label is processed by:
+
+converting the filename to lowercase,
+splitting the filename using underscores,
+keeping the alphabetic words,
+joining the words using spaces,
+removing unnecessary whitespace.
+
+Example result:
+
+{
+    'Poodle_07956.jpg': ['poodle'],
+    'fox_squirrel_01.jpg': ['fox squirrel']
+}
+
+The completed function should return 40 key-value pairs because there are 40 images in the pet_images/ folder.
+
+In check_images.py, the image directory is passed using:
+
+in_arg.dir
+
+For example:
+
+results = get_pet_labels(in_arg.dir)
