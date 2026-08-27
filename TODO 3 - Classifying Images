@@ -1,0 +1,80 @@
+The supplied classifier function in classifier.py is used to classify each image.
+
+The classifier requires:
+
+The full image path.
+The CNN architecture.
+
+The image directory and filename are combined before calling the classifier:
+
+classifier(images_dir + users_key, model)
+
+The classifier output is then converted to lowercase and stripped of unnecessary whitespace.
+
+The program compares the classifier label with the pet image label.
+
+A value of:
+
+1
+
+is stored when the labels match.
+
+A value of:
+
+0
+
+is stored when the labels do not match.
+
+The results dictionary therefore begins to take the following form:
+
+{
+    'Beagle_01141.jpg':
+    ['beagle', 'english foxhound', 0]
+}
+
+The three values represent:
+
+index 0 = Pet Image Label
+index 1 = Classifier Label
+index 2 = Whether the labels match
+8. TODO 4 - Classifying Labels as Dogs
+
+The adjust_results4_isadog() function uses the dognames.txt file to determine whether labels represent dogs.
+
+The file contains the names of valid dog breeds.
+
+The dog names are read into a dictionary so that labels can be checked quickly.
+
+If a label is found in the dog-name dictionary, it is classified as a dog:
+
+1 = dog
+
+If it is not found:
+
+0 = not a dog
+
+This check is performed for both:
+
+the actual pet image label,
+the classifier label.
+
+The final results dictionary contains five values:
+
+index 0 = Pet Image Label
+index 1 = Classifier Label
+index 2 = Labels Match
+index 3 = Pet Image Label is a Dog
+index 4 = Classifier Label is a Dog
+
+For example:
+
+{
+    'Beagle_01141.jpg':
+    ['beagle',
+     'walker hound, walker foxhound',
+     0,
+     1,
+     1]
+}
+
+This means that the breed was not classified correctly, but both the actual image and the classifier label represent dogs.
