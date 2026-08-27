@@ -1,0 +1,46 @@
+The program uses Python's time() function to measure how long the program takes to run.
+
+The start time is recorded before the main program logic begins:
+
+start_time = time()
+
+The end time is recorded after the main logic has finished:
+
+end_time = time()
+
+The total runtime is calculated by subtracting the start time from the end time:
+
+tot_time = end_time - start_time
+
+The timing functions are imported using:
+
+from time import time, sleep
+
+The sleep() function can also be used to test that the timing code is working correctly.
+
+The runtime is important because it allows the three CNN architectures to be compared not only by accuracy but also by the amount of time required to classify all of the images.
+
+5. TODO 1 - Command Line Arguments
+
+The get_input_args() function uses the argparse module to allow the user to provide information from the command line.
+
+The program uses three command-line arguments:
+
+Argument	Default	Purpose
+--dir	pet_images/	Folder containing pet images
+--arch	vgg	CNN architecture
+--dogfile	dognames.txt	File containing valid dog-breed names
+
+The arguments are parsed using:
+
+in_args = parser.parse_args()
+
+and returned using:
+
+return in_args
+
+This makes the program more flexible because different image folders, CNN architectures, and dog-name files can be supplied without changing the source code.
+
+For example:
+
+python check_images.py --dir pet_images/ --arch vgg --dogfile dognames.txt
