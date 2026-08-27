@@ -1,0 +1,11 @@
+The program is run using the three CNN architectures.
+
+ResNet
+python check_images.py --dir pet_images/ --arch resnet --dogfile dognames.txt
+AlexNet
+python check_images.py --dir pet_images/ --arch alexnet --dogfile dognames.txt
+The batch script can also be used:
+
+sh run_models_batch.sh
+
+This runs the program for all three architectures.
