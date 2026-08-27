@@ -1,0 +1,56 @@
+The calculates_results_stats() function uses the information in the results dictionary to calculate the final statistics.
+
+The following counts are calculated:
+
+Number of images
+Number of dog images
+Number of not-a-dog images
+Number of correctly classified dog images
+Number of correctly classified not-a-dog images
+Number of correctly classified dog breeds
+
+The calculations are based on the values stored at indexes 2, 3, and 4 of the results dictionary.
+
+Number of Images
+
+The number of images is the length of the results dictionary:
+
+n_images = len(results_dic)
+Number of Dog Images
+
+A pet image is a dog when:
+
+results_dic[key][3] == 1
+Number of Not-a-Dog Images
+
+A pet image is not a dog when:
+
+results_dic[key][3] == 0
+Correctly Classified Dog Images
+
+A dog is correctly classified when:
+
+results_dic[key][3] == 1 and results_dic[key][4] == 1
+Correctly Classified Not-a-Dog Images
+
+A non-dog is correctly classified when:
+
+results_dic[key][3] == 0 and results_dic[key][4] == 0
+Correctly Classified Dog Breeds
+
+A breed is correctly classified when the image is a dog and the labels match:
+
+results_dic[key][3] == 1 and results_dic[key][2] == 1
+
+The required percentages are calculated using the following formulas:
+
+Correctly Classified Dogs =
+(correct dog classifications / number of dog images) × 100
+
+Correctly Classified Not-a-Dogs =
+(correct non-dog classifications / number of non-dog images) × 100
+
+Correctly Classified Dog Breeds =
+(correct breed classifications / number of dog images) × 100
+
+A conditional check is used when calculating the percentage of non-dog images so that division by zero is avoided.
