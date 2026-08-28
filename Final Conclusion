@@ -1,0 +1,19 @@
+This project allowed me to practise several Python programming concepts while working with a pre-built image classifier.
+
+I used command-line arguments to make the program flexible, dictionaries to store image labels and results, file handling to read dog-breed names, string methods to format labels, and timing functions to compare the computational cost of the CNN architectures.
+
+The completed program addresses the two main objectives of the project:
+
+Identifying whether an image is a dog or not a dog.
+Identifying the breed of images that contain dogs.
+
+Based on the project results, VGG is the best overall CNN architecture.
+
+VGG achieves:
+
+100% accuracy for identifying dogs and non-dogs
+93.3% accuracy for identifying dog breeds
+
+ResNet performs better than AlexNet for breed classification, while AlexNet also achieves 100% dog/non-dog classification accuracy.
+
+Overall, VGG provides the strongest balance of performance for the two main objectives of this project.
