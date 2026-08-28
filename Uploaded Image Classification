@@ -1,0 +1,11 @@
+The uploaded images are classified using:
+
+sh run_models_batch_uploaded.sh
+
+This produces three result files:
+
+resnet_uploaded-images.txt
+alexnet_uploaded-images.txt
+vgg_uploaded-images.txt
+
+These files can then be compared to determine how each architecture performed on the uploaded images.
