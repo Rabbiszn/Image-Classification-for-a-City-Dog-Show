@@ -1,0 +1,39 @@
+The project results show that VGG and AlexNet correctly identify dogs and non-dogs with 100% accuracy.
+
+For dog-breed classification, VGG provides the best result.
+
+The expected comparison is:
+
+CNN Architecture	Dog / Not-a-Dog Accuracy	Dog Breed Accuracy
+ResNet	Lower than 100%	Better than AlexNet
+AlexNet	100%	Lower than VGG
+VGG	100%	93.3%
+
+Based on these results, VGG is the best overall architecture.
+
+VGG correctly identifies dogs and non-dogs with 100% accuracy and correctly classifies dog breeds 93.3% of the time.
+
+12. Classifying Uploaded Images
+
+The program can also be tested with four uploaded images.
+
+The required files are:
+
+Dog_01.jpg
+Dog_02.jpg
+Animal_Name_01.jpg
+Object_Name_01.jpg
+
+Dog_01.jpg should contain a dog with a known breed.
+
+Animal_Name_01.jpg should contain an animal that is not a dog.
+
+Object_Name_01.jpg should contain an object that is not an animal.
+
+Dog_02.jpg should be a horizontally flipped version of Dog_01.jpg, or an upside-down version if necessary.
+
+The four images are placed in:
+
+uploaded_images/
+
+The images should be JPEG files with a .jpg extension and should be approximately square.
