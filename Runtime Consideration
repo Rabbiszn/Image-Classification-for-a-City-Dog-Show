@@ -1,0 +1,43 @@
+Question 1
+
+Did all three model architectures classify Dog_01.jpg as the same breed?
+
+The results should be compared between ResNet, AlexNet, and VGG. Any differences in the predicted breed should be reported.
+
+Question 2
+
+Did each architecture classify Dog_01.jpg and Dog_02.jpg as the same breed?
+
+The predictions for the original image and the flipped image should be compared for each architecture. Any differences should be reported.
+
+Question 3
+
+Did all three architectures correctly classify Animal_Name_01.jpg and Object_Name_01.jpg as not dogs?
+
+The result files should be checked to identify any architecture that incorrectly classified either image as a dog.
+
+Question 4
+
+The best architecture should be selected based on the overall performance of the four uploaded images.
+
+The decision should consider:
+
+correct dog identification,
+correct non-dog identification,
+consistency between Dog_01.jpg and Dog_02.jpg,
+and breed classification accuracy.
+15. Runtime Consideration
+
+Accuracy is not the only factor that should be considered.
+
+A more accurate CNN model may require more computational resources and more time to run. A faster model with slightly lower accuracy may still be useful if its results are good enough for the purpose of the application.
+
+Therefore, the model selection should consider both:
+
+Accuracy
++
+Runtime
+
+For the project results provided, VGG is the best overall architecture because it performs particularly well on both main objectives.
+
+However, if processing speed were more important than the highest possible breed accuracy, another architecture could be considered if its results were accurate enough for the application.
